@@ -1,46 +1,62 @@
-# Getting Started with Create React App
+# Movie Explorer App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React-based movie exploration application built with Material-UI and Redux. The app uses the OMDb API to fetch and display movies, allowing users to search, filter, and view details of movies.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Movie Listing**: Displays a list of movies in a card-based grid layout.
+- **Search Functionality**: Search for movies by title using a search bar.
+- **Filters**:
+  - Filter by release year (1997 to the current year).
+  - Filter by type (Movies, TV Series, or Episodes).
+- **Pagination**: Navigate through the movie results 10 items per page.
+- **Movie Details**: Click on a movie to view detailed information, including title, year, genre, director, actors, plot, poster, and IMDb rating.
+- **Responsive UI**: Designed with Material-UI for a modern and responsive interface.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Frontend**:
+  - [React](https://reactjs.org/)
+  - [TypeScript](https://www.typescriptlang.org/)
+  - [Material-UI](https://mui.com/)
+  - [Redux Toolkit](https://redux-toolkit.js.org/)
+  - [Axios](https://axios-http.com/)
+  - [React Router](https://reactrouter.com/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **API**:
+  - [OMDb API](https://www.omdbapi.com/) (Open Movie Database API)
 
-### `npm test`
+- **Styling**:
+  - [SCSS](https://sass-lang.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation and Setup
 
-### `npm run build`
+Follow the steps below to set up and run the application locally:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. Clone the Repository
+```bash
+git clone https://github.com/malik-turk/movie-explorer-app
+```
+### 2. Install Dependencies
+```npm install```
+```npm start```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Project Structure
+```
+src/
+├── config/
+│   └── apiConfig.ts       # Shared API constants (API_KEY, BASE_URL)
+├── components/
+│   └── MovieList.tsx      # Movie listing component with search, filters, and pagination
+├── pages/
+│   └── MovieDetails.tsx   # Movie details page
+├── redux/
+│   ├── slices/
+│   │   └── moviesSlice.ts # Redux slice for managing movie state
+│   └── store.ts           # Redux store configuration
+├── App.tsx                # App routing setup
+└── index.tsx              # Entry point
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
